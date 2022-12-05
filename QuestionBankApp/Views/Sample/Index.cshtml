@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+	<style>
+		
+		div {
+			text-align:center;
+		}
+	</style>
+}
+
+		<div>
+			<h2>MCQ Question Bank</h2>
+			
+					@Html.ActionLink("Insert Question", "Add", null, new { @class = "btn btn-info ms-3" })
+				
+					@Html.ActionLink("See Questions", "displayAllQuestion", null, new { @class = "btn btn-info ms-3" })
+				
+					@*@Html.ActionLink("Find Question", "SearchByKeyWord", null, new { @class = "btn btn-info ms-3" })*@
+				
+		</div>
+	
+

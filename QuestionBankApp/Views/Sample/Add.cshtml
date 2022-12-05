@@ -1,0 +1,45 @@
+﻿@model QuestionBankApp.Models.Question_Table1
+
+@{
+	ViewBag.Title = "Add";
+	var data = ViewBag.SubjectType as List<SelectListItem>;
+}
+<style>
+	h1 {
+		text-align:center;
+		font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		
+	}
+	/*h2 {
+		font-size:larger ;
+	}*/
+
+</style>
+
+<div class="container">
+	@using (Html.BeginForm())
+	{
+		<div class="row">
+			<h1 >ADD QUESTION</h1>
+			<label >Enter the Question</label><br /><br />
+			@Html.EditorFor(m => m.Question)<br />
+			<label >Enter the Keyword of question</label><br /><br />
+			@Html.EditorFor(m => m.Keyword)<br />
+			<label >Enter the Subject Type</label><br /><br />
+			@Html.DropDownListFor(m => m.SubjectType, data)<br />
+			<label >Enter the Option1</label><br /><br />
+			@Html.EditorFor(m => m.Option1)<br />
+			<label >Enter the Option2</label><br /><br />
+			@Html.EditorFor(m => m.Option2)<br />
+			<label >Enter the Option3</label><br /><br />
+			@Html.EditorFor(m => m.Option3)<br />
+			<label >Enter the Option4</label><br /><br />
+			@Html.EditorFor(m => m.Option4)<br />
+			<button class="btn btn-danger mt-3">Add Question</button>
+		</div>
+
+
+
+	}
+</div>
+
